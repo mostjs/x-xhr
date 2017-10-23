@@ -1,6 +1,6 @@
-# most-xhr: Minimalist XHR stream
+# most-xhr
 
-Make XMLHttpRequests with a [`@most/core` Stream](http://mostcore.readthedocs.io/en/latest/).  Provide a function to setup the XMLHttpRequests however you want/need and get back a Stream containing the `load` (or `error`, or `timeout`) event.
+Make XMLHttpRequests with [`@most/core`](http://mostcore.readthedocs.io/en/latest/).  Provide a function to setup the XMLHttpRequests however you want/need and get back a Stream containing the `load` (or `error`, or `timeout`) event.
 
 ## Get it
 
