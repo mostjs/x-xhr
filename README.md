@@ -33,7 +33,7 @@ runEffects(responseStream, newDefaultScheduler())
 
 #### Handling errors
 
-By default, the returned stream _does not_ fail for successful HTTP requests whose status is >= 300.  This allows you to handle all HTTP status codes in whatever way is best for your application.
+By default, the returned stream _does not_ fail for errors or for successful HTTP requests whose status is >= 300.  This allows you to handle error events and HTTP status codes in whatever way is best for your application.
 
 If you need, you can detect errors and turn them into Stream failures using `chain()`:
 
