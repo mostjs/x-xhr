@@ -10,7 +10,7 @@ Make XMLHttpRequests with a [`@most/core` Stream](http://mostcore.readthedocs.io
 
 ## API
 
-### xhrStream :: (() &rarr; XMLHttpRequest) &rarr; Stream<ProgressEvent>
+### xhrStream :: (() &rarr; XMLHttpRequest) &rarr; Stream ProgressEvent
 
 Provide a function to setup the XMLHttpRequest however you need (e.g. setting request headers, etc.), but don't call `.send()`. Running the Stream will send the XMLHttpRequest, handle events, and call `.abort()` when necessary.
 
