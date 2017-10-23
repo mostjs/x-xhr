@@ -29,5 +29,5 @@ import { chain, now, throwError } from '@most/core'
 chain(progressEvent =>
   progressEvent.type === 'error'
   ? throwError(new Error(...))
-  ? now(event), xhrStream(...))
+  : now(event), xhrStream(...))
 ```
