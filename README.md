@@ -18,8 +18,6 @@ The returned Stream will contain at most 1 event: the ProgressEvent emitted by X
 
 ```js
 import { xhrStream } from 'most-xhr'
-import { runEffects } from '@most/core'
-import { newDefaultScheduler } from '@most/scheduler'
 
 const responseStream = xhrStream(() => {
   const xhr = new XMLHttpRequest()
@@ -27,8 +25,6 @@ const responseStream = xhrStream(() => {
   xhr.open('GET', 'https://...', true)
   return xhr
 })
-
-runEffects(responseStream, newDefaultScheduler())
 ```
 
 #### Handling errors
