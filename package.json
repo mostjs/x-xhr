@@ -1,5 +1,5 @@
 {
-  "name": "most-xhr",
+  "name": "@most/xhr",
   "version": "1.0.0",
   "description": "XHR with @most/core",
   "main": "dist/index.js",
@@ -8,7 +8,7 @@
   "license": "MIT",
   "devDependencies": {
     "@briancavalier/assert": "^3.4.0",
-    "@most/core": "^0.15.0",
+    "@most/core": "^1.0.0",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.0.1",
     "babel-preset-env": "^1.6.1",
