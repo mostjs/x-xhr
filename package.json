@@ -27,8 +27,8 @@
     "standard": "^10.0.3"
   },
   "dependencies": {
-    "@most/scheduler": "^0.13.1",
-    "@most/types": "^0.11.1"
+    "@most/scheduler": "^1.0.0",
+    "@most/types": "^1.0.0"
   },
   "scripts": {
     "build": "rollup -c && flow-copy-source -i '*.test.js' src dist",
@@ -36,7 +36,7 @@
     "test:typecheck": "flow check",
     "test:unit": "nyc mocha -r babel-register src/**/*.test.js",
     "test": "run-p test:lint test:typecheck test:unit",
-    "prepublish": "run-s build"
+    "prepare": "run-s build"
   },
   "babel": {
     "presets": [
