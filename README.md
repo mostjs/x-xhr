@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/briancavalier/most-xhr.svg?branch=master)](https://travis-ci.org/briancavalier/most-xhr)
+
 # most-xhr
 
 Make XMLHttpRequests with [`@most/core`](http://mostcore.readthedocs.io/en/latest/).  Provide a function to setup the XMLHttpRequests however you want/need and get back a Stream containing the `load` (or `error`, or `timeout`) event.
