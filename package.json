@@ -32,7 +32,7 @@
   },
   "scripts": {
     "build": "rollup -c && flow-copy-source -i '*.test.js' src dist",
-    "test:lint": "standard --fix --verbose '{src,test}/**/*.js' | snazzy",
+    "test:lint": "standard --fix --verbose 'src/**/*.js' | snazzy",
     "test:typecheck": "flow check",
     "test:unit": "nyc mocha -r babel-register src/**/*.test.js",
     "test": "run-p test:lint test:typecheck test:unit",
