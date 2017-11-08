@@ -1,0 +1,12 @@
+language: node_js
+cache:
+  yarn: true
+  directories:
+  - node_modules
+sudo: false
+node_js:
+  - "8"
+  - "6"
+branches:
+  only:
+    - master
