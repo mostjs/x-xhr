@@ -1,5 +1,5 @@
 // @flow
-import type { Stream, Sink, Scheduler, Disposable } from '@most/types'
+import type { Stream, Sink, Scheduler, Disposable, Time } from '@most/types'
 import { currentTime } from '@most/scheduler'
 import { addListeners } from './xhrListeners'
 import { XHRDisposable } from './XHRDisposable'
@@ -22,15 +22,17 @@ class XHRStream {
 }
 
 const handleXHR = (xhr: XMLHttpRequest, sink: Sink<ProgressEvent>, scheduler: Scheduler): Disposable => {
-  const handler = (event: ProgressEvent): void => {
-    const time = currentTime(scheduler)
-    sink.event(time, event)
-    sink.end(time)
-  }
+  const handler = (event: ProgressEvent): void =>
+    eventThenEnd(currentTime(scheduler), event, sink)
 
   addListeners(handler, xhr)
 
   xhr.send()
 
   return new XHRDisposable(handler, xhr)
+}
+
+const eventThenEnd = <A> (t: Time, a: A, sink: Sink<A>): void => {
+  sink.event(t, a)
+  sink.end(t)
 }
