@@ -6,7 +6,7 @@ import { XHRDisposable } from './XHRDisposable'
 
 /* global XMLHttpRequest, ProgressEvent */
 
-export const xhrStream = (createXHR: () => XMLHttpRequest): Stream<ProgressEvent> =>
+export const deferXHR = (createXHR: () => XMLHttpRequest): Stream<ProgressEvent> =>
   new XHRStream(createXHR)
 
 class XHRStream {

@@ -12,16 +12,16 @@ Make XMLHttpRequests with [`@most/core`](http://mostcore.readthedocs.io/en/lates
 
 ## API
 
-### xhrStream :: (() &rarr; XMLHttpRequest) &rarr; Stream ProgressEvent
+### deferXHR :: (() &rarr; XMLHttpRequest) &rarr; Stream ProgressEvent
 
-Provide a function to setup the XMLHttpRequest however you need (e.g. setting request headers, etc.), but don't call `.send()`. Running the Stream will send the XMLHttpRequest, handle events, and call `.abort()` when necessary.
+Provide a function to setup the XMLHttpRequest however you need (e.g. setting request headers, etc.), but don't call `.send()`. Running the Stream will invoke the function, send the returned XMLHttpRequest, handle events, and call `.abort()` when necessary.
 
 The returned Stream will contain at most 1 event: the ProgressEvent emitted by XMLHttpRequest's `load`, `error`, or `timeout` events.
 
 ```js
-import { xhrStream } from 'most-xhr'
+import { deferXHR } from 'most-xhr'
 
-const responseStream = xhrStream(() => {
+const responseStream = deferXHR(() => {
   const xhr = new XMLHttpRequest()
   xhr.responseType = 'json'
   xhr.open('GET', 'https://...', true)
@@ -29,17 +29,17 @@ const responseStream = xhrStream(() => {
 })
 ```
 
-#### Handling errors
+## Handling errors
 
 By default, the returned stream _does not_ fail for errors or for successful HTTP requests whose status is >= 300.  This allows you to handle error events and HTTP status codes in whatever way is best for your application.
 
 If you need, you can detect errors and turn them into Stream failures using `chain()`:
 
 ```js
-import { xhrStream } from 'most-xhr'
+import { deferXHR } from 'most-xhr'
 import { chain, now, throwError } from '@most/core'
 
-const responseStream = xhrStream(() => {
+const responseStream = deferXHR(() => {
   const xhr = new XMLHttpRequest()
   // setup xhr ...
   return xhr

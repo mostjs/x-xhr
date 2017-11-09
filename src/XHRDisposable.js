@@ -3,7 +3,7 @@ import { type XHRListener, removeListeners } from './xhrListeners'
 
 /* global XMLHttpRequest */
 
-// Flow seems to have issues with XMLHttpRequest.DONE satic constant,
+// Flow seems to have issues with XMLHttpRequest.DONE static constant,
 // so define one locally for now.
 export const XHR_DONE = 4
 

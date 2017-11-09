@@ -1,6 +1,6 @@
 // @flow
 import { describe, it } from 'mocha'
-import { xhrStream } from './xhrStream'
+import { deferXHR } from './xhrStream'
 import { run } from '@most/core'
 import { newDefaultScheduler } from '@most/scheduler'
 import { is, fail } from '@briancavalier/assert'
@@ -12,7 +12,7 @@ const testXHREvent = (event: string): TestCase =>
   (done) => {
     const xhr = createXHR()
     const progressEvent = {}
-    const s = xhrStream(() => xhr)
+    const s = deferXHR(() => xhr)
 
     setTimeout(() => xhr.emit(event, progressEvent))
 
