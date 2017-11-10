@@ -1,2 +1,2 @@
 // @flow
-export * from './xhrStream'
+export * from './request'
