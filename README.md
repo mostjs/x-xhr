@@ -1,14 +1,14 @@
 [![Build Status](https://travis-ci.org/briancavalier/most-xhr.svg?branch=master)](https://travis-ci.org/briancavalier/most-xhr)
 
-# most-xhr
+# @most/xhr
 
 Make XMLHttpRequests with [`@most/core`](http://mostcore.readthedocs.io/en/latest/).  Provide a function to setup the XMLHttpRequests however you want/need and get back a Stream containing the `load` (or `error`, or `timeout`) event.
 
 ## Get it
 
-`npm i most-xhr --save`
+`npm i @most/xhr --save`
 
-`yarn add most-xhr`
+`yarn add @most/xhr`
 
 ## API
 
@@ -19,7 +19,7 @@ Provide a function to setup the XMLHttpRequest however you need (e.g. setting re
 The returned Stream will contain at most 1 event: the ProgressEvent emitted by XMLHttpRequest's `load`, `error`, or `timeout` events.
 
 ```js
-import { request } from 'most-xhr'
+import { request } from '@most/xhr'
 
 const responseStream = request(() => {
   const xhr = new XMLHttpRequest()
@@ -36,7 +36,7 @@ By default, the returned stream _does not_ fail for errors or for successful HTT
 If you need, you can detect errors and turn them into Stream failures using `chain()`:
 
 ```js
-import { request } from 'most-xhr'
+import { request } from '@most/xhr'
 import { chain, now, throwError } from '@most/core'
 
 const responseStream = request(() => {
