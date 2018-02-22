@@ -48,7 +48,7 @@ const responseStream = request(() => {
 const failOnError = progressEvent =>
   progressEvent.type === 'error'
   ? throwError(new Error(...))
-  : now(event)
+  : now(progressEvent)
 
 const failOnErrorStream = chain(failOnError, responseStream)
 ```
