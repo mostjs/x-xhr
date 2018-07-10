@@ -4,14 +4,14 @@ import { assert, eq } from '@briancavalier/assert'
 import { type XHRListener, addListeners, removeListeners, XHR_EVENTS } from './xhrListeners'
 
 const createXHR = (listeners: Map<string, XHRListener>): Object =>
-({
-  addEventListener (event, listener) {
-    listeners.set(event, listener)
-  },
-  removeEventListener (event, listener) {
-    listeners.delete(event)
-  }
-})
+  ({
+    addEventListener (event, listener) {
+      listeners.set(event, listener)
+    },
+    removeEventListener (event, listener) {
+      listeners.delete(event)
+    }
+  })
 
 const listener = () => {}
 
