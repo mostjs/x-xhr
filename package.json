@@ -15,7 +15,7 @@
     "babel-preset-es2015-rollup": "^3.0.0",
     "babel-preset-flow": "^6.23.0",
     "babel-register": "^6.26.0",
-    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-flowtype": "^4.5.3",
     "flow-bin": "^0.76.0",
     "flow-copy-source": "^2.0.1",
     "mocha": "^5.2.0",
