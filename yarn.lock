@@ -182,20 +182,20 @@
     "@most/prelude" "^1.7.3"
     "@most/types" "^1.0.2"
 
-"@most/prelude@^1.5.0", "@most/prelude@^1.7.3":
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/@most/prelude/-/prelude-1.7.3.tgz#51db3f3ba3ed65431b6eea89ecb0a31826af640c"
+"@most/prelude@^1.5.0", "@most/prelude@^1.7.3", "@most/prelude@^1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@most/prelude/-/prelude-1.8.0.tgz#90814b9e92d538e2d1c6eb69c01dfe4e86b5c80e"
 
 "@most/scheduler@^1.2.0", "@most/scheduler@^1.2.3":
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/@most/scheduler/-/scheduler-1.2.3.tgz#7cb97904a23bbfcb2664c60ea4fe047d7b5572f7"
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@most/scheduler/-/scheduler-1.3.0.tgz#eebf563cde34bc7a99133e2b9df7c7356899ea43"
   dependencies:
-    "@most/prelude" "^1.7.3"
-    "@most/types" "^1.0.2"
+    "@most/prelude" "^1.8.0"
+    "@most/types" "^1.1.0"
 
-"@most/types@^1.0.0", "@most/types@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@most/types/-/types-1.0.2.tgz#a272c919a3dafe942bd02d63402f0548593af870"
+"@most/types@^1.0.0", "@most/types@^1.0.2", "@most/types@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@most/types/-/types-1.1.0.tgz#9f28ce9599d51f2307871c1b013257b0f3a2fb39"
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
