@@ -167,33 +167,33 @@
     object-inspect "^1.2.1"
 
 "@most/core@^1.3.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@most/core/-/core-1.5.0.tgz#b36b3620724e37ac3552659c1d71948958beb345"
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@most/core/-/core-1.6.1.tgz#3f6b84e4e41d303e8a0176beb6b314bdd3778352"
   dependencies:
-    "@most/disposable" "^1.2.2"
-    "@most/prelude" "^1.7.3"
-    "@most/scheduler" "^1.2.3"
-    "@most/types" "^1.0.2"
+    "@most/disposable" "^1.3.0"
+    "@most/prelude" "^1.8.0"
+    "@most/scheduler" "^1.3.0"
+    "@most/types" "^1.1.0"
 
-"@most/disposable@^1.2.2":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@most/disposable/-/disposable-1.2.2.tgz#1f9dfcc1b9d73165436eee34ddedc2e70d7be695"
+"@most/disposable@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@most/disposable/-/disposable-1.3.0.tgz#c27013fe4bca144e4977de3b46d730e14d7c1bfc"
   dependencies:
-    "@most/prelude" "^1.7.3"
-    "@most/types" "^1.0.2"
+    "@most/prelude" "^1.8.0"
+    "@most/types" "^1.1.0"
 
-"@most/prelude@^1.5.0", "@most/prelude@^1.7.3", "@most/prelude@^1.8.0":
+"@most/prelude@^1.5.0", "@most/prelude@^1.8.0":
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/@most/prelude/-/prelude-1.8.0.tgz#90814b9e92d538e2d1c6eb69c01dfe4e86b5c80e"
 
-"@most/scheduler@^1.2.0", "@most/scheduler@^1.2.3":
+"@most/scheduler@^1.2.0", "@most/scheduler@^1.3.0":
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/@most/scheduler/-/scheduler-1.3.0.tgz#eebf563cde34bc7a99133e2b9df7c7356899ea43"
   dependencies:
     "@most/prelude" "^1.8.0"
     "@most/types" "^1.1.0"
 
-"@most/types@^1.0.0", "@most/types@^1.0.2", "@most/types@^1.1.0":
+"@most/types@^1.0.0", "@most/types@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@most/types/-/types-1.1.0.tgz#9f28ce9599d51f2307871c1b013257b0f3a2fb39"
 
